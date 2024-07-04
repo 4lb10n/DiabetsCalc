@@ -8,9 +8,10 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/rechner.js" defer></script>
     <!-- CSS only-->
+    <link ref="stylesheet" href="./css/custom.css">
     <!-- Bootstrap-CSS -->
     <link ref="stylesheet" href="./css/bootstrap-grid.min.css">
-    <link ref="stylesheet" href="./css/custom.css">
+    
 </head>
 <body>
     <h1>Hilfsrechner für Nährwerttabellen</h1>
@@ -23,8 +24,8 @@
             <input type="text" step="any" placeholder="Gramm in der Verpackung" id="grammidv">
         </div><br>
         <div class="eingabefeld">
-            <label for="gramm">Angabe der pro Gramm auf der Verpackung</label><br>
-            <input type="text" step="any" placeholder="Gramm" id="gramm">
+            <label for="gramm">Angabe auf wie viel Gramm die Nährstoffe sind. </label><br>
+            <input type="text" step="any" placeholder="auf Gramm" id="gramm">
         </div><br>
         <div class="eingabefeld">
             <label for="kohlenhydrate">Kohlenhydrate in Gramm</label><br>
@@ -34,12 +35,12 @@
             <label for="zucker">Zucker in Gramm</label><br>
             <input type="text" step="any" placeholder="Zucker" id="zucker">
         </div><br>
-        <div class="Ausgabe">
-            <output></output>
         </div>
-        <div class="erbebnis">
-            <label for="ergebnis">Ergebnis</label>
-            <output type="text" id="ergebnis">
+        <div class="ergebnis">
+            <label for="ergebnis"></label>
+            <output type="text" id="result1">
+            <output type="text" id="result2">
+            <output type="text" id="result3">
         </div>
         <div class="button">
             <button type="button" id="berechnen">Berechnen</button>
