@@ -1,23 +1,23 @@
-var gramm = document.getElementById('gramm').value;
-var kohlenhydrate = document.getElementById('kohlenhydrate').value;
-var grammidv = document.getElementById('grammidv').value;
-var zucker = document.getElementById('zucker').value;
-
 document.getElementById("berechnen").addEventListener("click", function(){
-kohlenhydratInverpackung();
+    kohlenhydratImLebensmittel();
 })
-function kohlenhydratInverpackung() {
-    const ergebnis =  gramm / kohlenhydrate;
-if (ergebnis >= 4){
+function kohlenhydratImLebensmittel() {
+    let kohlenhydrate = document.getElementById('kohlenhydrate').value;
+    let floatKohlenhyrate = parseFloat(kohlenhydrate);
+    let zucker = document.getElementById('zucker').value;
+    let floatZucker = parseFloat(zucker);
  
-	document.getElementById('result1').innerText = 'Das Ergebnis ist: Gut' + ergebnis;
-	return ergebnis;
-}  else if(ergebnis==3){
-    document.getElementById('result2').innerText = 'Das Ergebnis ist: MIttel' + ergebnis;
-    return ergebnis;
+    const Ergebnis = (floatKohlenhyrate * 1.9 + floatZucker).toFixed(2);
+if (Ergebnis >= 4){
+ 
+	document.getElementById('result1').innerText = 'Das Ergebnis ist: Gut' + Ergebnis;
+	return Ergebnis;
+}  else if(Ergebnis ==3){
+    document.getElementById('result2').innerText = 'Das Ergebnis ist: MIttel' + Ergebnis;
+    return Ergebnis;
 }
 	else {
-	document.getElementById('result3').innerText = 'Das Ergebnis ist: Schlecht' + ergebnis;
-    return ergebnis;
+	document.getElementById('result3').innerText = 'Das Ergebnis ist: Schlecht' + Ergebnis;
+    return Ergebnis;
 }
 }
